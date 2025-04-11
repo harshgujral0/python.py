@@ -1,0 +1,76 @@
+#16 20  23 36 37 48 57 61  display date and time
+
+dec=10
+print(bin(dec),"in binary")
+print(oct(dec),"in octanal")
+print(hex(dec),"in hexadecimal")
+
+a="string"
+b=sorted(a)
+print(b)
+
+c=int(input("enter the range upto sum"))
+sum=0
+for i in range(0,c+1):
+    sum=sum+i
+print(sum)
+
+d=int(input("enter a number"))
+sum=0
+while d > 0:
+    e = d % 10
+    sum += e
+    d = d // 10
+
+print(sum)
+
+f=int(input("enter a number"))
+sum=0
+for i in range(1,f):
+  if (f%i==0):
+   sum=sum+i
+if (sum==f):
+    print("perfect number")
+else:
+    print("Not Perfect")
+
+def isanagram(s,t):
+    s_dict={}
+    t_dict={}
+    if len(s)!=len(t):
+        return False
+    for i in range (0,len(s)):
+        s_dict[s[i]]=s_dict.get(s[i],0)+1
+        t_dict[t[i]] = t_dict.get(t[i],0) + 1
+
+    if s_dict==t_dict:
+        return True
+
+print(isanagram("silent","listen"))
+
+one=12
+two=13
+three=19
+print(max(one,two,three))
+
+
+import calendar
+yy=2025
+print(calendar.calendar(yy))
+
+from datetime import datetime
+import pytz
+
+timezone=pytz.timezone("Asia/Kolkata")
+now=datetime.now(timezone)
+today=datetime.today()
+print(today)
+
+import numpy as np
+
+matrix1 = np.array([[1, 2], [3, 4]])
+matrix2 = np.array([[5, 6], [7, 8]])
+
+result = np.dot(matrix1, matrix2)
+
+print(result)
